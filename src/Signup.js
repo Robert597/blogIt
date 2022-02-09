@@ -57,7 +57,7 @@ return (
 <input type="text" placeholder="Username" value={username} onChange={(e) => { setUserName( e.target.value)
 } }/>
 <input type="text" placeholder="Email" value={useremail} onChange={(e) => setEmail(e.target.value)}/>
-<input type="text" placeholder="password" value={userpassword} onChange={(e) => setPassword(e.target.value)}/>
+<input type="password" placeholder="password" value={userpassword} onChange={(e) => setPassword(e.target.value)}/>
 {signError && <p style={{color: "red", fontSize: "18px", fontFamily: "poppins"}}>{signmessage}</p>}
 <button onClick={() => signAuth()}>Sign Up</button>
 </form>

@@ -12,8 +12,8 @@ const Mainpage = () => {
                    BlogIt is an amazing blog app designed with the intentions for users to let the world know of their thoughts, a platform to share memories, relive other people memorable events, connect with people all around the world, hear what others have to say and most importantly gain knowledge.
                </p>
            </div>
-          <button className="login"> <Link className="link"  to="/login">Login</Link></button>
-           <button className="signup"> <Link className="link" to="/signup">Signup</Link></button>
+           <Link className="link"  to="/login"><button className="login">Login</button></Link>
+           <Link className="link" to="/signup"><button className="signup">Signup</button></Link>
         </div>
     )
 }

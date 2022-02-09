@@ -57,7 +57,7 @@ const Login = () => {
 <div className='loginFormContainer'>
 <form className='loginForm' onSubmit={(e) => e.preventDefault()}>
 <input type="text" placeholder="Email" value={loginemail} onChange={(e) => setEmail(e.target.value)}/>
-<input type="text" placeholder="password" value={loginpassword} onChange={(e) => setPassword(e.target.value)}/>
+<input type="password" placeholder="password" value={loginpassword} onChange={(e) => setPassword(e.target.value)}/>
 {logError && <p style={{color: "red", fontSize: "18px", fontFamily: "poppins"}}>{errormessage}</p>}
 <p className='forgot'><a href='#'>Forgot password</a></p>
 <button onClick={() => loginAuth()}>Login</button>

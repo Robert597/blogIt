@@ -5,7 +5,6 @@
 .Signup, .Login{
     min-height: calc(100vh - 3rem);
     width: 100vw;
-    animation: myAnim3 1s ease 0s 1 normal forwards;
     transition: 1s ease-in all;
   }
   .signupTop, .loginTop{
@@ -69,7 +68,7 @@
     text-align: center;
     margin-bottom: 40px;
   }
-  .signupForm input[type="text"], .loginForm input[type="text"] {
+  .signupForm input[type="text"], .signupForm input[type="password"], .loginForm input[type="text"], .loginForm input[type="password"] {
     width: 100%;
     padding: 15px 10px;
     background-color: transparent;
