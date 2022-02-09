@@ -31,7 +31,7 @@ code {
 
 
 .footer{
-  height: 3rem;
+  height: 6rem;
   color: #fff;
   width: 100vw;
   background-color: #101820;
@@ -42,6 +42,12 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.FooterIcon{
+margin-right: 40px;
+}
+.footerIcon {
+  margin-right: 25px;
 }
 
 
