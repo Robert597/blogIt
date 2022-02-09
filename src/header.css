@@ -80,6 +80,7 @@
     margin-right: 40px;
     margin-left: 10px;
     cursor: pointer;
+    animation: bounce1 3s ease 0s infinite normal forwards;
   }
   .user img {
     width: 100%;
