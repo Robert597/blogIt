@@ -1,0 +1,50 @@
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(346.37deg, #101820 6.29%, #3C71A5 58.47%, rgba(0, 155, 249, 0.74) 109.84%);
+  }
+  
+  .intro img {
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+     animation-name: grow;
+     transition: 1s ease-in all;
+  }
+  @keyframes grow {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+  
+    to {
+      opacity: 0;
+      transform: scale(5);
+  
+    }
+  }
+  @media all and (max-width: 650px) {
+    .intro img{
+      transform: scale(0.9);
+      animation-duration: 2s;
+      animation-name: mobilegrow;
+      animation-delay: 0.5s;
+      transition: 1s ease-in all;
+    }
+    @keyframes mobilegrow {
+      from {
+        opacity: 1;
+        transform: scale(0.9);
+      }
+     
+    
+      to {
+        opacity: 0;
+        transform: scale(2);
+    
+      }
+    }
+  }

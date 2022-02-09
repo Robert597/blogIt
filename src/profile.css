@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fruktur&family=Lato:ital,wght@0,400;0,700;1,300;1,400;1,700&family=Lora:wght@400;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Noto+Serif&family=PT+Serif&family=Poppins:wght@100;300;400;500&family=Rubik:wght@300&display=swap');
+/*#3996CE*/
+.profileContainer{
+    background-color: #101820;
+    height: 80px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    position: fixed;
+    transition: 1s ease-in all;
+    z-index: 30;
+}
+.comeup{
+    bottom: 0;
+}
+.comedown{
+    bottom: -80px;
+}
+.hide{
+    display: none;
+}
+.mainprofile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 90%;
+}
+.logDelete{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.userNameImg{
+    transition: 1s ease-in all;
+}
+.show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profileImg{
+    width: 40px;
+    height: 40px;
+    margin: 0 30px;
+    cursor: pointer;
+}
+.profileImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #3996CE;
+}
+.profilename p {
+    font-size: 18px;
+    font-family: merriweather;
+    color: #fff;
+}
+.editProfile{
+    background-color: #3996CE;
+    color: #fff;
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    margin: 0 10px;
+    font-family: poppins;
+    font-size: 14px;
+    transition: 1s linear all;
+    cursor: pointer;
+}
+.profileForm{
+    margin-left: 20px;
+    transition: 1s ease-in all;
+}
+.formProfile{
+    display: flex;
+    align-items: center;
+}
+.formProfile button{
+    background-color: #3996CE;
+    color: #fff;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    margin: 0 5px;
+    font-family: poppins;
+    font-size: 14px;
+    cursor: pointer;
+}
+.formProfile input{
+    padding: 8px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: merriweather;
+}
+.formProfile input[type="file"]{
+    display: none;
+}
+.profileFile{
+    height: 100%;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+}
+.profileFile p{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: merriweather;
+   margin: 0 5px;
+}
+.filePencil{
+    font-size: 16px;
+    margin-left : 6px;
+    color: #fff;
+}
+.logOut{
+    background-color: #b92429;
+    color: #fff;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    margin: 0 15px;
+    font-family: poppins;
+    font-size: 14px;
+    cursor: pointer;
+}
+.fileDelete{
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3996CE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.fileCancel{
+    font-size: 18px;
+    color: #101820;
+}
+.prof-roller{
+margin-left: 50px;
+}
+.prof-roller p{
+    font-size: 20px;
+    font-family: poppins;
+    color: #fff;
+}
+  

@@ -1,0 +1,268 @@
+*{
+  outline: none;
+  border: none;
+}
+.Signup, .Login{
+    min-height: calc(100vh - 3rem);
+    width: 100vw;
+    animation: myAnim3 1s ease 0s 1 normal forwards;
+    transition: 1s ease-in all;
+  }
+  .signupTop, .loginTop{
+    background-color: #101820;
+    height: 13rem;
+    position: relative;
+    display: flex;
+  }
+  .imgContainer{
+    width: 300px;
+    height: 117px;
+    margin: 30px auto 0;
+    
+  }
+  .imgContainer img{
+    width: 100%;
+    height: 100%;
+  }
+  .custom-shape-divider-bottom-1642343645 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  
+  .custom-shape-divider-bottom-1642343645 svg {
+    position: relative;
+    display: block;
+    width: calc(158% + 1.3px);
+    height: 137px;
+  }
+  
+  .custom-shape-divider-bottom-1642343645 .shape-fill {
+    fill: #FFFFFF;
+  }
+  .loginText{
+    margin-top: 70px;
+  }
+  .signupText{
+    margin-top: 30px;
+  }
+  .signupText p, .loginText p {
+    font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  /* identical to box height */
+  text-align: center;
+  color: #3996CE;
+  }
+  .signupForm, .loginForm{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .signupForm input[type="text"], .loginForm input[type="text"] {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: transparent;
+    border: 2px solid #3996CE;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: Merriweather;
+    color: #101820;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  .signupForm button, .loginForm button {
+    width: 300px;
+    padding: 20px 10px;
+    background: linear-gradient(to right, #3996CE 50%, #101820 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 22px;
+    font-family: poppins;
+    text-align: center;
+    color: #fff;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    transition: 1s ease in all;
+  }
+  .signupForm button:hover, .loginForm button:hover{
+    background-position: left;
+  }
+  .signupForm input:focus, .loginForm input:focus, .searchContainer input:focus{
+    outline: none;
+  }
+  .signupForm input::placeholder, .loginForm input::placeholder,.searchContainer input::placeholder{
+    font-family: Merriweather;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: rgba(16, 24, 32, 0.59);
+  }
+  .lds-roller {
+    position: relative;
+    width: calc(100% - 80px);
+    height: calc(100vh - 20rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #101820;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .forgot a{
+    color: #3996CE;
+    font-size: 18px;
+    font-family: poppins;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .adjacent{
+    margin-right: 30px;
+    color: #101820;
+    font-size: 18px;
+    font-family: poppins;
+    text-transform: capitalize;
+    text-align: right;
+  }
+  .adjacentLink{
+    color: #3996CE;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  @keyframes myAnim3 {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media all and (max-width: 760px){
+    .Signup, .Login{
+    max-height: 100vh;
+    overflow: hidden;
+    }
+  }
+  
+  @media all and (max-width: 430px){
+    .imgContainer{
+      width: 200px;
+      height: 78px;
+     }
+     .signupTop, .loginTop{
+      background-color: #101820;
+      height: 11rem;
+    }
+    .custom-shape-divider-bottom-1642343645 svg {
+      height: 100px;
+    }
+    .signupText p, .loginText p {
+    font-size: 30px;
+    line-height: 30px;
+    /* identical to box height */
+    text-align: center;
+    color: #3996CE;
+    }
+    .signupForm, .loginForm{
+      width: 80%;
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .Signup, .Login{
+      max-height: 100vh;
+    }
+  }
+  
