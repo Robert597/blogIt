@@ -1,13 +1,14 @@
 import signImg from './lightt.png';
 import { auth } from './firebase';
 import { useState } from 'react';
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import DataContext from './context/datacontext';
 import { getDoc, doc } from 'firebase/firestore';
 import "./login.css";
 import { Link } from 'react-router-dom';
+import {FaRegWindowClose} from 'react-icons/fa';
 
 const Login = () => {
     const [loginemail, setEmail] = useState('');
@@ -15,6 +16,8 @@ const Login = () => {
     const [logging, setIsLogging] = useState(false);
     const [logError, setLogError] = useState(false);
     const [errormessage, setErrorMessage] = useState('');
+    const [forgotEmail, setForgetEmail] = useState('');
+
     const {setUserName, setUserImage, usersCollectionRef, authUser, setAuthUser} = useContext(DataContext)
     let navigate = useNavigate();
     const loginAuth = async () => {
@@ -37,6 +40,19 @@ const Login = () => {
 
         }
     }
+    const forgotPassword = async () => {
+        await sendPasswordResetEmail(auth, forgotEmail).then(() => {
+            document.querySelector('.loginFormContainer').style.opacity = 1;
+            document.querySelector('.forgotBox').style.display = "none";
+
+            alert('Reset Email has been sent');
+            setForgetEmail('');
+        } );
+
+     
+
+        setForgetEmail('');
+    }
     return (
         
         <div className='Login'>
@@ -49,6 +65,26 @@ const Login = () => {
     </svg>
 </div>
 </div>
+<div className='forgotBox'>
+    <div className='forgotIconCont'>
+    <FaRegWindowClose className='forgotIcon'
+    onClick={() => {
+        document.querySelector('.loginFormContainer').style.opacity = 1;
+        document.querySelector('.forgotBox').style.display = "none";
+    }}/>
+    </div>
+    <div className='forgotText'>
+        <p> Reset Password</p>
+    </div>
+    <div className='forgotInput'>
+        <input type="text" 
+        placeholder = "Reset Email"
+        required
+        value={forgotEmail}
+onChange= {((e) => setForgetEmail(e.target.value))}/>
+<button className='forgotButton' onClick={() => forgotPassword()}>Submit</button> 
+    </div>
+</div>
 {logging && <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
 {!logging && <>
 <div className='loginText'><p>
@@ -59,7 +95,11 @@ const Login = () => {
 <input type="text" placeholder="Email" value={loginemail} onChange={(e) => setEmail(e.target.value)}/>
 <input type="password" placeholder="password" value={loginpassword} onChange={(e) => setPassword(e.target.value)}/>
 {logError && <p style={{color: "red", fontSize: "18px", fontFamily: "poppins"}}>{errormessage}</p>}
-<p className='forgot'><a href='#'>Forgot password</a></p>
+<p className='forgot' onClick={() => {
+    document.querySelector('.loginFormContainer').style.opacity = 0.3;
+    document.querySelector('.forgotBox').style.display = "block";
+
+}}><a href='#'>Forgot password</a></p>
 <button onClick={() => loginAuth()}>Login</button>
 </form>
 <p className='adjacent'>You don't have an account?<Link to="/signup" className='adjacentLink'>Sign Up</Link></p>

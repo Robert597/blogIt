@@ -6,6 +6,63 @@
     min-height: calc(100vh - 3rem);
     width: 100vw;
     transition: 1s ease-in all;
+    position: relative;
+  }
+  .forgotBox{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: #3996CE;
+     width: 70vw;
+     padding: 30px;
+     border-radius: 10px;
+     z-index: 20;
+     margin-top: 30px;
+     display: none;
+  }
+  .forgotIconCont{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    cursor: pointer;
+  }
+  .forgotIcon{
+    font-size: 24px;
+    color: #101820;
+  }
+  .forgotText p {
+    text-align: center;
+    font-family: Lato;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #fff;
+  }
+  .forgotInput{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .forgotInput input{
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-family: Merriweather;
+    font-style: normal;
+    font-size: 16px;
+    color: #101820;
+  }
+  .forgotButton{
+    width: 250px;
+    align-self: center;
+    font-family: poppins;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #101820;
+    color: #fff;
+    cursor: pointer;
   }
   .signupTop, .loginTop{
     background-color: #101820;
@@ -102,7 +159,7 @@
   .signupForm input:focus, .loginForm input:focus, .searchContainer input:focus{
     outline: none;
   }
-  .signupForm input::placeholder, .loginForm input::placeholder,.searchContainer input::placeholder{
+  .signupForm input::placeholder, .loginForm input::placeholder,.searchContainer input::placeholder, .forgotInput input::placeholder{
     font-family: Merriweather;
   font-style: normal;
   font-size: 16px;
@@ -233,7 +290,11 @@
     overflow: hidden;
     }
   }
-  
+  @media all and (max-width: 500px){
+    .forgotBox{
+      width: 95vw;
+    }
+  }
   @media all and (max-width: 430px){
     .imgContainer{
       width: 200px;
